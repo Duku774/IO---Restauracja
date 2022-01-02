@@ -139,35 +139,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Danie.cpp" />
-    <ClCompile Include="..\Gotowka.cpp" />
-    <ClCompile Include="..\Item.cpp" />
-    <ClCompile Include="..\Karta.cpp" />
-    <ClCompile Include="..\Klient.cpp" />
-    <ClCompile Include="..\Menu.cpp" />
-    <ClCompile Include="..\Osoba.cpp" />
-    <ClCompile Include="..\Platnosc.cpp" />
-    <ClCompile Include="..\Pracownik.cpp" />
-    <ClCompile Include="..\Rezerwacja.cpp" />
-    <ClCompile Include="..\Stolik.cpp" />
-    <ClCompile Include="..\Wlasciciel.cpp" />
-    <ClCompile Include="..\Zamowienie.cpp" />
+    <ClCompile Include="libraries\Danie.cpp" />
+    <ClCompile Include="libraries\Gotowka.cpp" />
+    <ClCompile Include="libraries\Item.cpp" />
+    <ClCompile Include="libraries\Karta.cpp" />
+    <ClCompile Include="libraries\Klient.cpp" />
+    <ClCompile Include="libraries\Menu.cpp" />
+    <ClCompile Include="libraries\Osoba.cpp" />
+    <ClCompile Include="libraries\Platnosc.cpp" />
+    <ClCompile Include="libraries\Pracownik.cpp" />
+    <ClCompile Include="libraries\Rezerwacja.cpp" />
+    <ClCompile Include="libraries\Stolik.cpp" />
+    <ClCompile Include="libraries\Wlasciciel.cpp" />
+    <ClCompile Include="libraries\Zamowienie.cpp" />
     <ClCompile Include="Źródło.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Danie.h" />
-    <ClInclude Include="..\Gotowka.h" />
-    <ClInclude Include="..\Item.h" />
-    <ClInclude Include="..\Karta.h" />
-    <ClInclude Include="..\Klient.h" />
-    <ClInclude Include="..\Menu.h" />
-    <ClInclude Include="..\Osoba.h" />
-    <ClInclude Include="..\Platnosc.h" />
-    <ClInclude Include="..\Pracownik.h" />
-    <ClInclude Include="..\Rezerwacja.h" />
-    <ClInclude Include="..\Stolik.h" />
-    <ClInclude Include="..\Wlasciciel.h" />
-    <ClInclude Include="..\Zamowienie.h" />
+    <ClInclude Include="libraries\Danie.h" />
+    <ClInclude Include="libraries\Gotowka.h" />
+    <ClInclude Include="libraries\Item.h" />
+    <ClInclude Include="libraries\Karta.h" />
+    <ClInclude Include="libraries\Klient.h" />
+    <ClInclude Include="libraries\Menu.h" />
+    <ClInclude Include="libraries\Osoba.h" />
+    <ClInclude Include="libraries\Platnosc.h" />
+    <ClInclude Include="libraries\Pracownik.h" />
+    <ClInclude Include="libraries\Rezerwacja.h" />
+    <ClInclude Include="libraries\Stolik.h" />
+    <ClInclude Include="libraries\Wlasciciel.h" />
+    <ClInclude Include="libraries\Zamowienie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

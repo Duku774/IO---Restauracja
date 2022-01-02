@@ -18,84 +18,84 @@
     <ClCompile Include="Źródło.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Danie.cpp">
+    <ClCompile Include="libraries\Danie.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Gotowka.cpp">
+    <ClCompile Include="libraries\Gotowka.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Item.cpp">
+    <ClCompile Include="libraries\Item.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Karta.cpp">
+    <ClCompile Include="libraries\Karta.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Klient.cpp">
+    <ClCompile Include="libraries\Klient.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Menu.cpp">
+    <ClCompile Include="libraries\Menu.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Osoba.cpp">
+    <ClCompile Include="libraries\Osoba.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Pracownik.cpp">
+    <ClCompile Include="libraries\Platnosc.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Rezerwacja.cpp">
+    <ClCompile Include="libraries\Pracownik.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Stolik.cpp">
+    <ClCompile Include="libraries\Rezerwacja.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Zamowienie.cpp">
+    <ClCompile Include="libraries\Stolik.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Platnosc.cpp">
+    <ClCompile Include="libraries\Wlasciciel.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
-    <ClCompile Include="..\Wlasciciel.cpp">
+    <ClCompile Include="libraries\Zamowienie.cpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Danie.h">
+    <ClInclude Include="libraries\Danie.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Gotowka.h">
+    <ClInclude Include="libraries\Gotowka.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Item.h">
+    <ClInclude Include="libraries\Item.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Karta.h">
+    <ClInclude Include="libraries\Karta.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Klient.h">
+    <ClInclude Include="libraries\Klient.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Menu.h">
+    <ClInclude Include="libraries\Menu.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Osoba.h">
+    <ClInclude Include="libraries\Osoba.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Platnosc.h">
+    <ClInclude Include="libraries\Platnosc.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Pracownik.h">
+    <ClInclude Include="libraries\Pracownik.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Rezerwacja.h">
+    <ClInclude Include="libraries\Rezerwacja.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Stolik.h">
+    <ClInclude Include="libraries\Stolik.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Wlasciciel.h">
+    <ClInclude Include="libraries\Wlasciciel.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="..\Zamowienie.h">
+    <ClInclude Include="libraries\Zamowienie.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
