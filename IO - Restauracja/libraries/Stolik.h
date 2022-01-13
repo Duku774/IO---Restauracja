@@ -17,12 +17,12 @@ class Stolik
 	private: string _idStolika;
 	private: int _liczbaMiejsc;
 	private: bool _czyZajety;
-	public: Rezerwacja* _unnamed_Rezerwacja_;
-	public: Zamowienie* _unnamed_Zamowienie_;
+	public: Rezerwacja* _Rezerwacja_;
+	public: Zamowienie* _Zamowienie_;
 
-	public: void zmianaStokilow();
+	public: void zmianaStokilow(Stolik* aMiejsce, Stolik* bMiejsce);
 
-	public: void nowyStolik();
+	public: void nowyStolik(string aId, int aMiejsca);
 
 	public: void aktualizacja();
 };

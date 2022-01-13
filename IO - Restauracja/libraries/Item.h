@@ -14,11 +14,10 @@ class Item;
 
 class Item
 {
-	private: string _ilosc;
-	public: Zamowienie* _unnamed_Zamowienie_;
-	public: std::vector<Danie*> _unnamed_Danie_;
+	private: int _ilosc;
+	public: Danie* _rodzaj_Dania_; // jesli to klasa '_' na koniec
 
-	public: void getItem();
+	public: void setItem(int aIlosc, Danie *aDanie);
 };
 
 #endif

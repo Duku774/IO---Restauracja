@@ -11,7 +11,9 @@ void Danie::getDanie() {
 	throw "Not yet implemented";
 }
 
-void Danie::setDanie(string aId, string aNazwa, string aCena) {
-	throw "Not yet implemented";
+void Danie::setDanie(string aId, string aNazwa, double aCena) {
+	_idDania = aId;
+	_nazwaDania = aNazwa;
+	_cenaDania = aCena;	
 }
 
