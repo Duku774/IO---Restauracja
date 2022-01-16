@@ -9,10 +9,6 @@ bool Wlasciciel::czyAdmin() {
 	throw "Not yet implemented";
 }
 
-void Wlasciciel::zmianaHasla() {
-	throw "Not yet implemented";
-}
-
 void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek) {
 	throw "Not yet implemented";
 }

@@ -17,10 +17,11 @@ class Wlasciciel: public Pracownik
 	public: bool czyAdmin();
 
 public: 
-
 	void zmianaHasla(string haslo)
 	{
+
 	this->_haslo = haslo;
+
 	}
 public:
 	string getHaslo()

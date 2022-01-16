@@ -2,10 +2,11 @@
 using namespace std;
 #include "libraries/Zamowienie.h"
 #include "libraries/Wlasciciel.h"
+void setup(Wlasciciel *admin);
 int main()
 {
 	Wlasciciel admin;
-	admin.zmianaHasla("1234");
+	setup(&admin);
 	while (1)
 	{
 	int menu_opt;
@@ -24,9 +25,52 @@ int main()
 			cout << "Podaj haslo" << endl;
 			cin >> pass;
 		}
-		break;
+		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n" << endl;
+		int menu_wyb;
+		cin >> menu_wyb;
+		switch (menu_wyb)
+		{
+		case 1:
+		{
+			string new_pass;
+			cout << "zmiana hasla\npodaj haslo:" << endl;
+			cin >> new_pass;
+			admin.zmianaHasla(new_pass);
+			break;
+		}
+		case 2:
+		{
+			/*
+			//tutaj jest tylko na chwile test, chyba zaimplementowanie bedzie inaczej
+			string nazwa;
+			cin >> nazwa;
+			int wiek, id;
+			string ul;
+			cin >> wiek;
+			cin >> ul;
+			cin >> id;
+			Pracownik* nazwa = new Pracownik(wiek,ul,id);
+			*/
+			break;
+		}
+		case 3:
+			break;
+		};
+		
 
 	};
+	
 	}
 	return 0;
+}
+void setup(Wlasciciel* admin)
+{
+	admin->zmianaHasla("1234");
+	admin->set_idPracownika(1);
+	admin->set_wiek(22);
+	admin->set_adres("Ulica w krakowie");
+	admin->set_imie("Stefan");
+	admin->set_nazwisko("Zapalka");
+	admin->set_nrTelefonu("123456789");
+	
 }
