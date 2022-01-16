@@ -16,8 +16,17 @@ class Wlasciciel: public Pracownik
 
 	public: bool czyAdmin();
 
-	public: void zmianaHasla();
+public: 
 
+	void zmianaHasla(string haslo)
+	{
+	this->_haslo = haslo;
+	}
+public:
+	string getHaslo()
+	{
+		return _haslo;
+	}
 	public: void dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek);
 
 	public: void usunPracownika(int aIdPracownika);
