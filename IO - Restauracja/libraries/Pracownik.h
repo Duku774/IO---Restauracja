@@ -14,16 +14,17 @@ class Pracownik: public Osoba
 private: 
 	int _wiek{};
 	string _adres;
-	int _idPracownika{};
 public:
 	Pracownik() {}
-	Pracownik(int wiek, string adres, int id)
+	Pracownik(string imie,string nazwisko,int wiek, string adres, int id)
 	{
 		_wiek = wiek;
 		_adres = adres;
-		_idPracownika = id;
+		this->set_imie(imie);
+		this->set_nazwisko(nazwisko);
+		this->set_adres(adres);
 	}
-	~Pracownik() 
+	~Pracownik(void) 
 	{
 	}
 	void set_wiek(int wiek)
@@ -34,9 +35,13 @@ public:
 	{
 		this->_adres = adres;
 	}
-	void set_idPracownika(int id)
+	int get_wiek()
 	{
-		this->_idPracownika = id;
+		return _wiek;
+	}
+	string get_adres()
+	{
+		return _adres;
 	}
 };
 

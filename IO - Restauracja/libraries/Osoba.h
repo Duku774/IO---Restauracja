@@ -24,6 +24,18 @@ public:
 	{
 		_nrTelefonu = nr;
 	}
+	string get_imie()
+	{
+		return _imie;
+	}
+	string get_nazwisko()
+	{
+		return _nazwisko;
+	}
+	string get_nrTelefonu()
+	{
+		return _nrTelefonu;
+	}
 };
 
 #endif

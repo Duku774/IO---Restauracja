@@ -25,7 +25,7 @@ int main()
 			cout << "Podaj haslo" << endl;
 			cin >> pass;
 		}
-		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n" << endl;
+		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n4)Pokaz wszystkich pracownikow\n" << endl;
 		int menu_wyb;
 		cin >> menu_wyb;
 		switch (menu_wyb)
@@ -40,20 +40,24 @@ int main()
 		}
 		case 2:
 		{
-			/*
-			//tutaj jest tylko na chwile test, chyba zaimplementowanie bedzie inaczej
-			string nazwa;
-			cin >> nazwa;
-			int wiek, id;
-			string ul;
-			cin >> wiek;
-			cin >> ul;
-			cin >> id;
-			Pracownik* nazwa = new Pracownik(wiek,ul,id);
-			*/
+			string Imie, Nazwisko, NrTelefonu, Adres; 
+			int Wiek;
+			cout << "Podaj w kolejnosci Imie, Nazwisko, Nr Telefonu, Adres, Wiek. kazdy wyraz oddzielaj spacja" << endl;
+			cin >> Imie >> Nazwisko >> NrTelefonu >> Adres>> Wiek;
+			Wlasciciel::dodajPracownika(Imie, Nazwisko, NrTelefonu, Adres, Wiek);
+			
 			break;
 		}
 		case 3:
+			Wlasciciel::pokazPracownikow();
+			cout << "Podaj id pracownika ktorego chcesz usunac:" << endl;
+			int id;
+			cin >> id;
+			Wlasciciel::usunPracownika(id-1);
+			break;
+
+		case 4:
+			Wlasciciel::pokazPracownikow();
 			break;
 		};
 		
@@ -66,11 +70,9 @@ int main()
 void setup(Wlasciciel* admin)
 {
 	admin->zmianaHasla("1234");
-	admin->set_idPracownika(1);
 	admin->set_wiek(22);
 	admin->set_adres("Ulica w krakowie");
 	admin->set_imie("Stefan");
 	admin->set_nazwisko("Zapalka");
 	admin->set_nrTelefonu("123456789");
-	
 }
