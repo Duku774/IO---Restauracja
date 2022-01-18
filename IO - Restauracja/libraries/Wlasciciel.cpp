@@ -10,6 +10,8 @@ Pracownik pracownicy[30];
 int n = 0;
 void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek) 
 {
+	
+
 	if (n < 30)
 	{
 		pracownicy[n].set_wiek(aWiek);
@@ -24,7 +26,6 @@ void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelef
 }
 void Wlasciciel::pokazPracownikow()
 {
-	//for (int i = 0; i < n; i++)
 	int i=0;
 	while(pracownicy[i].get_imie()!="")
 	{
@@ -51,4 +52,11 @@ void Wlasciciel::usunPracownika(int aIdPracownika)
 	pokazPracownikow();
 	n--;
 }
+void Wlasciciel::dodajPotrawe() 
+{
 
+}
+void Wlasciciel::usunPotrawe() 
+{
+
+}
