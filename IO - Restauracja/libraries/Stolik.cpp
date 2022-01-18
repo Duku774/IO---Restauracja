@@ -6,15 +6,38 @@ using namespace std;
 #include "Rezerwacja.h"
 #include "Zamowienie.h"
 
-void Stolik::zmianaStokilow() {
-	throw "Not yet implemented";
+void zmianaStokilow();
+
+void nowyStolik(int nidStolika, int nliczbaMiejsc) {
+	_idStolika = nidStolika;
+	_liczbaMiejsc = nliczbaMiejsc;
+	_czyZarezerwowany = false;
 }
 
-void Stolik::nowyStolik() {
-	throw "Not yet implemented";
+void dodajRezerwacje(Rezerwacja& rezerwacja) {
+	_czyZarezerwowany = true;
+
+
+	_unnamed_Rezerwacja_ = &rezerwacja;
 }
 
-void Stolik::aktualizacja() {
-	throw "Not yet implemented";
+void statusStolika() {
+	cout << "Nr Stolika: " << _idStolika << endl;
+	cout << "Liczba miejsc: " << _liczbaMiejsc << endl;
+
+
+
+	if (_czyZarezerwowany == true) {
+		cout << "Zarezerwowany dla: " << endl;
+		_unnamed_Rezerwacja_->statusRezerwacji();
+	}
+	else
+		cout << "Brak rezerwacji" << endl;
 }
 
+//void aktualizacja(Rezerwacja *rezerwacja) {
+	//_czyZajety = true;
+
+
+//}
+};

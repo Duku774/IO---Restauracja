@@ -14,17 +14,21 @@ class Stolik;
 
 class Stolik
 {
-	private: string _idStolika;
-	private: int _liczbaMiejsc;
-	private: bool _czyZajety;
-	public: Rezerwacja* _unnamed_Rezerwacja_;
-	public: Zamowienie* _unnamed_Zamowienie_;
+	private: 
+		string _idStolika;
+		int _liczbaMiejsc;
+		bool _czyZajety;
+		bool _czyZarezerwowany;
 
-	public: void zmianaStokilow();
+	public: 
+		Rezerwacja* _unnamed_Rezerwacja_;
+		Zamowienie* _unnamed_Zamowienie_;
 
-	public: void nowyStolik();
+		void zmianaStokilow();
 
-	public: void aktualizacja();
+		void nowyStolik();
+
+		void aktualizacja();
 };
 
 #endif
