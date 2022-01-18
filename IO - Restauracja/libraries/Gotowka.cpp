@@ -1,4 +1,5 @@
 #include <exception>
+#include <iostream>
 using namespace std;
 
 #include "Gotowka.h"
@@ -6,7 +7,7 @@ using namespace std;
 
 void Gotowka::zatwierdzeniePlatnosci(double aOtrzymane, double _suma) {
 	if (aOtrzymane < _suma) {
-		throw "Zaplacono za malo";
+		cout << "Zaplacono za malo" << endl;
 	}
 	else {
 		double reszta = _suma - aOtrzymane;

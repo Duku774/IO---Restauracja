@@ -20,7 +20,7 @@ class Stolik
 	public: Rezerwacja* _Rezerwacja_;
 	public: Zamowienie* _Zamowienie_;
 
-	public: void zmianaStokilow(Stolik* aMiejsce, Stolik* bMiejsce);
+	public: void zmianaStokilow(Stolik* bMiejsce);
 
 	public: void nowyStolik(string aId, int aMiejsca);
 

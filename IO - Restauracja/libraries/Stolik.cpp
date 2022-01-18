@@ -1,30 +1,29 @@
 #include <exception>
 #include <string>
+#include <iostream>
 using namespace std;
 
 #include "Stolik.h"
 #include "Rezerwacja.h"
 #include "Zamowienie.h"
 
-void Stolik::zmianaStokilow(Stolik* aMiejsce, Stolik* bMiejsce) {
-	if (aMiejsce->_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
-		bool pom = aMiejsce->_czyZajety;
-		aMiejsce->_czyZajety = bMiejsce->_czyZajety;
+void Stolik::zmianaStokilow(Stolik* bMiejsce) {
+	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
+		bool pom = _czyZajety;
+		_czyZajety = bMiejsce->_czyZajety;
 		bMiejsce->_czyZajety = pom;
 
-		Rezerwacja* pomRez = aMiejsce->_Rezerwacja_;
-		aMiejsce->_Rezerwacja_ = bMiejsce->_Rezerwacja_;
+		Rezerwacja* pomRez = _Rezerwacja_;
+		_Rezerwacja_ = bMiejsce->_Rezerwacja_;
 		bMiejsce->_Rezerwacja_ = pomRez;
 
-		Zamowienie* pomZam = aMiejsce->_Zamowienie_;
-		aMiejsce->_Zamowienie_ = bMiejsce->_Zamowienie_;
+		Zamowienie* pomZam = _Zamowienie_;
+		_Zamowienie_ = bMiejsce->_Zamowienie_;
 		bMiejsce->_Zamowienie_ = pomZam;
 
-		delete pomRez;
-		delete pomZam;
 	}
 	else {
-		throw "Liczba miejsc w zamienianych stolikach nie jest rowna";
+		cout << "Liczba miejsc w zamienianych stolikach nie jest rowna" << endl;
 	}
 }
 
