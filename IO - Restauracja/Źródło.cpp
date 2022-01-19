@@ -25,10 +25,10 @@ int main()
 		cin >> pass;
 		while (pass != admin.getHaslo())
 		{
-			cout << "Podaj haslo" << endl;
+			cout << "Haslo nieprawidlowe!\nPodaj haslo" << endl;
 			cin >> pass;
 		}
-		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n4)Pokaz wszystkich pracownikow\n" << endl;
+		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n4)Pokaz wszystkich pracownikow\n5)Dodaj potrawy do menu\n6)Usun potrawy z menu" << endl;
 		int menu_wyb;
 		cin >> menu_wyb;
 		switch (menu_wyb)
@@ -61,6 +61,10 @@ int main()
 
 		case 4:
 			Wlasciciel::pokazPracownikow();
+			break;
+		case 5:
+			break;
+		case 6:
 			break;
 		};
 		
