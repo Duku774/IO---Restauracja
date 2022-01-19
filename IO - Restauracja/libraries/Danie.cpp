@@ -7,11 +7,22 @@ using namespace std;
 #include "Menu.h"
 #include "Item.h"
 
-void Danie::getDanie() {
-	throw "Not yet implemented";
+public void Danie::getDanie(string _nazwaDania) {
+	_nazwaDania = a_nazwaDania;
+
+	cout << "Wprowadz nazwe dania: " << endl;
+    	cin >> _nazwaDania;
+    	czyIstnieje = 0;
+
 }
 
-void Danie::setDanie(string aId, string aNazwa, string aCena) {
-	throw "Not yet implemented";
+public void Danie::setDanie(string aId, _nazwaDania,double _cenaDania) {
+f (czyIstnieje == 0) {
+		cout << "Numer ID: " << aID << endl;
+		cout << "Nazwa: " << _nazwaDania << endl;
+		cout << "Cena: " << _cenaDania << endl;
+	}
+	else
+		cout << "To danie nie istnieje" << endl;
 }
 
