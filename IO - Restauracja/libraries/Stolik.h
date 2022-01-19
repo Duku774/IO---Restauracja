@@ -6,7 +6,7 @@ using namespace std;
 #define __Stolik_h__
 
 // #include "Rezerwacja.h"
-// #include "Zamówienie.h"
+// #include "ZamÃ³wienie.h"
 
 class Rezerwacja;
 class Zamowienie;
@@ -14,17 +14,20 @@ class Stolik;
 
 class Stolik
 {
-	private: string _idStolika;
-	private: int _liczbaMiejsc;
-	private: bool _czyZajety;
-	public: Rezerwacja* _Rezerwacja_;
-	public: Zamowienie* _Zamowienie_;
 
-	public: void zmianaStokilow(Stolik* bMiejsce);
+	private: 
+		string _idStolika;
+		int _liczbaMiejsc;
+		bool _czyZajety;
+		bool _czyZarezerwowany;
 
-	public: void nowyStolik(string aId, int aMiejsca);
-
-	public: void aktualizacja();
+	public: 
+		Rezerwacja* _Rezerwacja_;
+		Zamowienie* _Zamowienie_;
+    void zmianaStokilow(Stolik* bMiejsce);
+    void nowyStolik(string aId, int aMiejsca);
+		void nowyStolik();
+		void aktualizacja();
 };
 
 #endif

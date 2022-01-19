@@ -14,21 +14,23 @@ class Rezerwacja;
 
 class Rezerwacja
 {
-	private: string _dataRezerwacji;
-	private: string _data;
-	private: string _nazwisko;
-	private: int _godzina;
-	private: int _nrRezerwacji;
-	public: Klient* _unnamed_Klient_;
-	public: Stolik* _unnamed_Stolik_;
+private: string _dataRezerwacji;
+private: string _data;
+private: string _nazwisko;
+private: int _godzina;
+private: int _nrRezerwacji;
+private: int _Ilosc_ludzi;
+private: int czyIstnieje;
+public: Klient* _unnamed_Klient_;
+public: Stolik* _unnamed_Stolik_;
 
-	public: int nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi);
+public: int nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi);
 
-	public: void zmianaRezerwacji(int aNrRezerwacji);
+public: void zmianaRezerwacji();
 
-	public: void usunRezerwacjie(int aNrRezerwacji);
+public: void usunRezerwacjie();
 
-	public: void statusRezerwacji(int aNrRezerwacji);
+public: void statusRezerwacji();
 };
 
 #endif
