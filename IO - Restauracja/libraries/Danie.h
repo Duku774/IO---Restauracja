@@ -16,17 +16,13 @@ class Danie;
 
 class Danie
 {
-	private: int _idDania;
+	private: string _idDania;		//_nazwaNazwa - zmienne klasy
 	private: string _nazwaDania;
 	private: double _cenaDania;
-	public: Zamowienie* _unnamed_Zamowienie_;
-	public: Menu* _unnamed_Menu_;
-	public: Item* _unnamed_Item_;
-	public: Menu* _unnamed_Menu_2;
+	public: Menu* _unnamed_Menu;
 
 	public: void getDanie();
-
-	public: void setDanie(string aId, string aNazwa, string aCena);
+	public: void setDanie(string aId, string aNazwa, double aCena);	//aNazwa - argumenty
 };
 
 #endif

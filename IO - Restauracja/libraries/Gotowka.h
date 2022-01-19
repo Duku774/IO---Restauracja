@@ -9,10 +9,8 @@ using namespace std;
 // class Platnosc;
 class Gotowka;
 
-class Gotowka: public Platnosc
-{
-
-	public: void zatwierdzeniePlatnosci();
+class Gotowka: public Platnosc {
+	public: void zatwierdzeniePlatnosci(double aOtrzymane, double aWymagane);
 };
 
 #endif

@@ -25,4 +25,3 @@ f (czyIstnieje == 0) {
 	else
 		cout << "To danie nie istnieje" << endl;
 }
-
