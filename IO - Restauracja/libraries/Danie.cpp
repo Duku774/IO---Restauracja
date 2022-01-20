@@ -8,6 +8,7 @@ using namespace std;
 #include "Menu.h"
 #include "Item.h"
 
+
 /*
 Metoda pokazDanie
 Wyswietla dane o danym daniu
@@ -15,6 +16,7 @@ Nazwe, ID oraz cene
 */
 
 void Danie::pokazDanie() {
+
 	cout << "Nazwa: " << _nazwaDania;
 	cout << " ID: " << _idDania;
 	cout << " Cena: " << _cenaDania << " PLN" << endl;

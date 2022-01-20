@@ -1,13 +1,22 @@
 #include <exception>
 #include <vector>
-#include<iostream>
+#include <iostream>
 #include "Menu.h"
 #include "Danie.h"
 
 using namespace std;
 
 Danie dania[40]; // Tablica wszystich dan
-int z = 0; // Liczba edytowanego ostatnio dania
+int z = 0;  // Liczba edytowanego ostatnio dania
+void Menu::setup()
+{
+    string nazwatab[] = {"Rosol","Pierogi"};
+    double cenatab[] = {10,15};
+    for (int i = 0; i < sizeof(nazwatab) / sizeof(nazwatab[0]); i++)
+    {
+        dodajPotrawe(i+1,nazwatab[i],cenatab[i]);
+    }
+}
 
 /*
 Metoda dodajPotrawe
@@ -18,7 +27,6 @@ void Menu::dodajPotrawe(int aId, string nazwaDania, double cenaDania) {
 	if(z<40) {
         dania[z].setDanie(aId, nazwaDania, cenaDania);
     	z++;
-    	pokazMenu();
     }
     else 
         cout << "Nie można dodać kolejnej potrawy" << endl;

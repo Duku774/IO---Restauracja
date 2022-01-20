@@ -12,7 +12,7 @@ class Zamowienie;
 class Danie;
 class Item;
 
-class Item
+class Item: public Danie
 {
 	private: 
 		int _ilosc;

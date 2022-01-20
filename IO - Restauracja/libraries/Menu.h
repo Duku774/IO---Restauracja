@@ -18,7 +18,6 @@ class Menu
 		void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
 		void usunPotrawe(int aId); 
 		void pokazMenu();
-
 };
 
 #endif

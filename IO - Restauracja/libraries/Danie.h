@@ -22,12 +22,13 @@ class Danie
 		double _cenaDania;
 
 	public: 
-		Menu* _unnamed_Menu;
+
 		void pokazDanie();
 		void setDanie(int aId, string aNazwa, double aCena);	//aNazwa - argumenty
 		int get_idDania();
 		string get_nazwaDania();
 		double get_cenaDania();
+
 };
 
 #endif

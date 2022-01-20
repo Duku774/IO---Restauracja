@@ -21,23 +21,32 @@ class Zamowienie;
 
 class Zamowienie
 {
-	private: int _liczbaPotraw;
-	private: bool _naWynos;
-	private: string _idStolika;
-	private: string _idZamówienia;
-	public: Klient* _unnamed_Klient_;
-	public: Stolik* _unnamed_Stolik_;
-	public: Platnosc* _unnamed_Platnosc_;
-	public: Danie* _unnamed_Danie_;
-	public: std::vector<Item*> _unnamed_Item_;
+	private: 
+		int _liczbaPotraw;
+		bool _naWynos;
+		string _idStolika;
+		string _idZamówienia;
+		double suma;
+	public:
+		Klient* _unnamed_Klient_;
+		Stolik* _unnamed_Stolik_;
+		Platnosc* _unnamed_Platnosc_;
+		Danie* _unnamed_Danie_;
+		std::vector<Item*> _unnamed_Item_;
 
-	public: void wyswietlZamowienie();
+		void wyswietlZamowienie();
 
-	public: void noweZamowienie(int aIlePotraw);
+		static void noweZamowienie();
 
-	public: void edytujZamowienie();
+		void edytujZamowienie();
 
-	public: void platnosc();
+		void platnosc();
+
+		void set_suma();
+
+		double get_suma();
+
+		
 };
 
 #endif
