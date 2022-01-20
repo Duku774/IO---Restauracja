@@ -14,8 +14,10 @@ Zamienia ze soba dwa stoliki (rezerwacje i zamowienia odnoszace sie do miejsca)
 Dziala tylko gdy obydwa stoliki maja rowna ilosc miejsc
 */
 
-void Stolik::zmianaStokilow(Stolik* bMiejsce) {
-	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
+void Stolik::zmianaStokilow(Stolik* bMiejsce) 
+{
+	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) 
+	{
 		bool pom = _czyZajety;
 		_czyZajety = bMiejsce->_czyZajety;
 		bMiejsce->_czyZajety = pom;
@@ -29,7 +31,8 @@ void Stolik::zmianaStokilow(Stolik* bMiejsce) {
 		bMiejsce->_Zamowienie_ = pomZam;
 
 	}
-	else {
+	else 
+	{
 		cout << "Liczba miejsc w zamienianych stolikach nie jest rowna" << endl;
 	}
 }

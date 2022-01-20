@@ -2,11 +2,13 @@
 using namespace std;
 #include "libraries/Zamowienie.h"
 #include "libraries/Wlasciciel.h"
+#include"libraries/Menu.h"
 void setup(Wlasciciel *admin);
 int main()
 {
 	Wlasciciel admin;
 	setup(&admin);
+	Menu::setup();
 	while (1)
 	{
 	int menu_opt;
@@ -25,7 +27,7 @@ int main()
 			cout << "Haslo nieprawidlowe!\nPodaj haslo" << endl;
 			cin >> pass;
 		}
-		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n4)Pokaz wszystkich pracownikow\n5)Dodaj potrawy do menu\n6)Usun potrawy z menu" << endl;
+		cout << "1)Zmiana hasla\n2)Dodaj pracownika\n3)Usun pracownika\n4)Pokaz wszystkich pracownikow\n5)Dodaj potrawy do menu\n6)Usun potrawy z menu\n7)Pokaz menu" << endl;
 		int menu_wyb;
 		cin >> menu_wyb;
 		switch (menu_wyb)
@@ -45,7 +47,6 @@ int main()
 			cout << "Podaj w kolejnosci Imie, Nazwisko, Nr Telefonu, Adres, Wiek. kazdy wyraz oddzielaj spacja" << endl;
 			cin >> Imie >> Nazwisko >> NrTelefonu >> Adres>> Wiek;
 			Wlasciciel::dodajPracownika(Imie, Nazwisko, NrTelefonu, Adres, Wiek);
-			
 			break;
 		}
 		case 3:
@@ -60,14 +61,16 @@ int main()
 			Wlasciciel::pokazPracownikow();
 			break;
 		case 5:
+			Wlasciciel::dodajPotrawe();
 			break;
 		case 6:
+			Wlasciciel::usunPotrawe();
+			break;
+		case 7:
+			Menu::pokazMenu();
 			break;
 		};
-		
-
 	};
-	
 	}
 	return 0;
 }

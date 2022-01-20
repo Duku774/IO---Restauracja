@@ -8,6 +8,15 @@ using namespace std;
 
 Danie dania[40];
 int z = 0;
+void Menu::setup()
+{
+    string nazwatab[] = {"Rosol","Pierogi"};
+    double cenatab[] = {10,15};
+    for (int i = 0; i < sizeof(nazwatab) / sizeof(nazwatab[0]); i++)
+    {
+        dodajPotrawe(i+1,nazwatab[i],cenatab[i]);
+    }
+}
 
 void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania) 
 {
@@ -17,7 +26,6 @@ void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania)
         dania[z].set_nazwaDania(nazwaDania);
         dania[z].set_cenaDania(cenaDania);
     	z++;
-    	pokazMenu();
     }
     else 
         cout << "Nie można dodać kolejnej potrawy" << endl;
@@ -47,13 +55,5 @@ void Menu::pokazMenu()
     		cout << "\n";
             i++;
     	}
-}
-
-void Menu::dodajDanieDoMenu() {
-	throw "Not yet implemented";
-}
-
-void Menu::usunDanieZMenu() {
-	throw "Not yet implemented";
 }
 

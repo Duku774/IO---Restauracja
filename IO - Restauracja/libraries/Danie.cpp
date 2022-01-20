@@ -19,7 +19,8 @@ void Danie::setDanie(int aId,string a_nazwaDania,double a_cenaDania)
 	_idDania = aId;
 	_nazwaDania = a_nazwaDania;
 	_cenaDania = a_cenaDania;
-	if (czyIstnieje == 0) {
+	if (czyIstnieje == 0) 
+	{
 		cout << "Numer ID: " << aId << endl;
 		cout << "Nazwa: " << a_nazwaDania << endl;
 		cout << "Cena: " << a_cenaDania << endl;

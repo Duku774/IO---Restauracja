@@ -5,6 +5,7 @@ using namespace std;
 
 #include "Wlasciciel.h"
 #include "Pracownik.h"
+#include"Menu.h"
 
 Pracownik pracownicy[30];
 int n = 0;
@@ -54,9 +55,20 @@ void Wlasciciel::usunPracownika(int aIdPracownika)
 }
 void Wlasciciel::dodajPotrawe() 
 {
-
+	int aId;
+	string nazwaDania;
+	double cenaDania;
+	Menu::pokazMenu();
+	cout << "\nPodaj id, nazwe dania oraz cene" << endl;
+	cin >> aId >> nazwaDania >> cenaDania;
+	Menu::dodajPotrawe(aId,nazwaDania,cenaDania);
 }
 void Wlasciciel::usunPotrawe() 
 {
+	int aId;
+	Menu::pokazMenu();
+	cout << "\nPodaj id potrawy ktora chcesz usunac: " << endl;
+	cin >> aId;
+	Menu::usunPotrawe(aId);
 
 }

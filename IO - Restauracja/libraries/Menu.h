@@ -13,17 +13,17 @@ class Menu;
 class Menu
 {
 	public: Danie* _unnamed_Danie_;
+
 	public: std::vector<Danie*> _unnamed_Danie_2;
 
-	public: void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
+	static void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
 
-	public: void usunPotrawe(int aId);
+	static void usunPotrawe(int aId);
 
-	public: void pokazMenu();
+	static void pokazMenu();
 
-	public: void dodajDanieDoMenu();
+	static void setup();
 
-	public: void usunDanieZMenu();
 };
 
 #endif
