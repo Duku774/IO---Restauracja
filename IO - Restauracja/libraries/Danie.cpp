@@ -1,3 +1,4 @@
+#include <iostream>
 #include <exception>
 #include <string>
 using namespace std;
@@ -8,12 +9,22 @@ using namespace std;
 #include "Item.h"
 
 void Danie::getDanie() {
-	throw "Not yet implemented";
+	cout << "Nazwa: " << _nazwaDania;
+	cout << " ID: " << _idDania;
+	cout << " Cena: " << _cenaDania << " PLN" << endl;
+
 }
 
-void Danie::setDanie(string aId, string aNazwa, double aCena) {
+void Danie::setDanie(string aId,string a_nazwaDania,double a_cenaDania) {
 	_idDania = aId;
-	_nazwaDania = aNazwa;
-	_cenaDania = aCena;	
-}
+	_nazwaDania = a_nazwaDania;
+	_cenaDania = a_cenaDania;
+	if (czyIstnieje == 0) {
+		cout << "Numer ID: " << aId << endl;
+		cout << "Nazwa: " << a_nazwaDania << endl;
+		cout << "Cena: " << a_cenaDania << endl;
+	}
 
+	else
+		cout << "To danie nie istnieje" << endl;
+}

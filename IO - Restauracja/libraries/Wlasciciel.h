@@ -7,7 +7,7 @@ using namespace std;
 
 #include "Pracownik.h"
 
-// class Pracownik;
+//class Pracownik;
 //class Wlasciciel;
 
 class Wlasciciel: public Pracownik
@@ -15,8 +15,6 @@ class Wlasciciel: public Pracownik
 private: string _haslo;
 
 public: 
-	bool czyAdmin();
-
 	void zmianaHasla(string haslo)
 	{
 	this->_haslo = haslo;
@@ -28,6 +26,8 @@ public:
 	static void dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek);
 	static void pokazPracownikow();
 	static void usunPracownika(int aIdPracownika);
+	static void dodajPotrawe();
+	static void usunPotrawe();
 };
 
 #endif

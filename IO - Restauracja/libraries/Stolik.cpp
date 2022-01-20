@@ -7,6 +7,8 @@ using namespace std;
 #include "Rezerwacja.h"
 #include "Zamowienie.h"
 
+
+
 void Stolik::zmianaStokilow(Stolik* bMiejsce) {
 	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
 		bool pom = _czyZajety;
@@ -35,7 +37,20 @@ void Stolik::nowyStolik(string aId, int aMiejsca) {
 	_Zamowienie_ = NULL;
 }
 
-void Stolik::aktualizacja() {
-	throw "Not yet implemented";
+void Stolik::statusStolika() {
+	cout << "Nr Stolika: " << _idStolika << endl;
+	cout << "Liczba miejsc: " << _liczbaMiejsc << endl;
+
+	if (_czyZarezerwowany == true) {
+		cout << "Zarezerwowany dla: " << endl;
+		_Rezerwacja_->statusRezerwacji();
+	}
+	else
+		cout << "Brak rezerwacji" << endl;
 }
 
+//void aktualizacja(Rezerwacja *rezerwacja) {
+	//_czyZajety = true;
+
+
+//}

@@ -19,6 +19,7 @@ class Danie
 	private: string _idDania;		//_nazwaNazwa - zmienne klasy
 	private: string _nazwaDania;
 	private: double _cenaDania;
+private: int czyIstnieje = 0;
 	public: Menu* _unnamed_Menu;
 
 	public: void getDanie();
