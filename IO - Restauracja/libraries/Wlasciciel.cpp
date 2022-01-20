@@ -6,14 +6,17 @@ using namespace std;
 #include "Wlasciciel.h"
 #include "Pracownik.h"
 
-Pracownik pracownicy[30];
-int n = 0;
-void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek) 
-{
-	
+Pracownik pracownicy[30]; // Tablica wszystkich pracownikow
+int n = 0; // Odnosnik do danego pracownika
 
-	if (n < 30)
-	{
+/*
+Metoda dodajPracownika
+Dodaje pracownika do tablicy pracownika
+Na podstawie podanych argumentow prypisuje wartosci odpowiednim zmiennym
+*/
+
+void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek) {
+	if (n < 30) {
 		pracownicy[n].set_wiek(aWiek);
 		pracownicy[n].set_adres(aAdres);
 		pracownicy[n].set_imie(aImie);
@@ -24,11 +27,16 @@ void Wlasciciel::dodajPracownika(string aImie, string aNazwisko, string aNrTelef
 	}
 	else cout << "brak miesjca, usun pracownika!" << endl;
 }
-void Wlasciciel::pokazPracownikow()
-{
+
+/*
+Metoda pokazPracownikow
+Wyswietla tablice wszystkich pracownikow
+Wraz ze wszystkimi danymi o nich
+*/
+
+void Wlasciciel::pokazPracownikow(){
 	int i=0;
-	while(pracownicy[i].get_imie()!="")
-	{
+	while(pracownicy[i].get_imie()!="") {
 		cout << "Pracownik nr. " << i + 1 << endl;
 		cout << "Imie: " <<pracownicy[i].get_imie() << endl;
 		cout << "Nazwisko: " <<pracownicy[i].get_nazwisko() << endl;
@@ -39,10 +47,14 @@ void Wlasciciel::pokazPracownikow()
 		i++;
 	}
 }
-void Wlasciciel::usunPracownika(int aIdPracownika) 
-{
-	for (int i = aIdPracownika; i < n; i++)
-	{
+
+/*
+Metoda usunPracownika
+Usuwa podanego po ID pracownika z listy pracownikow
+*/
+
+void Wlasciciel::usunPracownika(int aIdPracownika) {
+	for (int i = aIdPracownika; i < n; i++) {
 		pracownicy[i].set_wiek(pracownicy[i + 1].get_wiek());
 		pracownicy[i].set_adres(pracownicy[i + 1].get_adres());
 		pracownicy[i].set_imie(pracownicy[i + 1].get_imie());

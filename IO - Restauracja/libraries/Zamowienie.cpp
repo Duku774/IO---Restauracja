@@ -13,6 +13,10 @@ using namespace std;
 
 Danie danie[20];
 
+/*
+Metoda wyswietlZamowienie
+Wyswietla wszystkie dane odnosnie zamowienia
+*/
 
 void Zamowienie::wyswietlZamowienie() 
 {
@@ -20,9 +24,15 @@ void Zamowienie::wyswietlZamowienie()
 	{
 		cout << endl;
 		cout << i << ". " << endl;
-		danie[i].getDanie();
+		danie[i].pokazDanie();
 	}
 }
+
+/*
+Metoda noweZamowienie
+Tworzy nowe zamowienie na podstawie podanej liczby
+Jest to liczba roznych rodzajow dan w zamowieniu
+*/
 
 void Zamowienie::noweZamowienie(int aIlePotraw) 
 {
@@ -45,6 +55,12 @@ void Zamowienie::noweZamowienie(int aIlePotraw)
 	}
 	wyswietlZamowienie();
 }
+
+/*
+Metoda edytujZamowienie
+Zmienia dana pozycje w zamowieniu
+Bazuje na znajomosci menu -> musi byc znane ID, Nazwa oraz cena dania na ktore jest zmiana
+*/
 
 void Zamowienie::edytujZamowienie() 
 {

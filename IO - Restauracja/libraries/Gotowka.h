@@ -10,7 +10,8 @@ using namespace std;
 class Gotowka;
 
 class Gotowka: public Platnosc {
-	public: void zatwierdzeniePlatnosci(double aOtrzymane, double aWymagane);
+	public: 
+		void zatwierdzeniePlatnosci(double aOtrzymane, double aWymagane);
 };
 
 #endif
