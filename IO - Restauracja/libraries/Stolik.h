@@ -24,10 +24,11 @@ class Stolik
 	public: 
 		Rezerwacja* _Rezerwacja_;
 		Zamowienie* _Zamowienie_;
-    void zmianaStokilow(Stolik* bMiejsce);
-    void nowyStolik(string aId, int aMiejsca);
-		void nowyStolik();
-		void aktualizacja();
+
+		void zmianaStokilow(Stolik* bMiejsce);
+		void nowyStolik(string aId, int aMiejsca);
+		void aktualizacja(Rezerwacja* aRezerwacja);
+		void aktualizacja(Zamowienie* aZamowienie);
 		void statusStolika();
 };
 

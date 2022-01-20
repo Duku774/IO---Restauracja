@@ -14,10 +14,11 @@ class Item;
 
 class Item
 {
-	private: int _ilosc;
+	private: 
+		int _ilosc;
 	public: 
 		Danie* _rodzaj_Dania_; // jesli to klasa '_' na koniec
-		void setItem(int aIlosc, Danie* aDanie);
+		void setItem(int aIlosc, Danie *aDanie);
 };
 
 #endif

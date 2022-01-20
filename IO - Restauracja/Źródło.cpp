@@ -5,7 +5,6 @@ using namespace std;
 void setup(Wlasciciel *admin);
 int main()
 {
-
 	Wlasciciel admin;
 	setup(&admin);
 	while (1)
