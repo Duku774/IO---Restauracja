@@ -8,14 +8,19 @@ using namespace std;
 #include "Menu.h"
 #include "Item.h"
 
-void Danie::getDanie() {
+void Danie::getDanie() 
+{
 	cout << "Nazwa: " << _nazwaDania;
 	cout << " ID: " << _idDania;
 	cout << " Cena: " << _cenaDania << " PLN" << endl;
 
 }
+void Danie::pokazDanie()
+{
 
-void Danie::setDanie(string aId,string a_nazwaDania,double a_cenaDania) {
+}
+void Danie::setDanie(int aId,string a_nazwaDania,double a_cenaDania) 
+{
 	_idDania = aId;
 	_nazwaDania = a_nazwaDania;
 	_cenaDania = a_cenaDania;
