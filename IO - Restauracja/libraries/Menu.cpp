@@ -1,6 +1,6 @@
 #include <exception>
 #include <vector>
-#include<iostream>
+#include <iostream>
 #include "Menu.h"
 #include "Danie.h"
 
@@ -33,13 +33,12 @@ void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania)
 
 void Menu::usunPotrawe(int aId) 
 {
-	for (int i = aId; i < z; i++)
+	for (int i = aId-1; i < z; i++)
     	{
         dania[i].set_idDania(dania[i + 1].get_idDania());
         dania[i].set_nazwaDania(dania[i + 1].get_nazwaDania());
         dania[i].set_cenaDania(dania[i + 1].get_cenaDania());
     	}
-    	dania[aId].pokazDanie();
     	z--;
 }
 
@@ -50,7 +49,7 @@ void Menu::pokazMenu()
     	{
 
     		cout << "Id: " << dania[i].get_idDania() << endl;
-    		cout << "Nazwa Dania" << dania[i].get_nazwaDania() << endl;
+    		cout << "Nazwa Dania: " << dania[i].get_nazwaDania() << endl;
     		cout << "Cena: " << dania[i].get_cenaDania() << endl;
     		cout << "\n";
             i++;

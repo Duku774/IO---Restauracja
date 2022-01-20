@@ -17,7 +17,8 @@ _Ilosc_ludzi -> na ile osob jest rezerwacja
 _czyIstnieje -> uzywana pozniej w tworzeniu nowej rezerwacji (stara pozostaje w pamieci)
 */
 	
-void Rezerwacja::nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi) {
+void Rezerwacja::nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi) 
+{
 	_nazwisko = aNazwisko;
 	_godzina = aGodzina;
 	_data = aData;
@@ -70,7 +71,8 @@ Zmienia _czyIstnieje na falsz -> blokuje tym niepotrzebna zmiane
 Jak tworzona jest nowa rezerwacja zmiana na true -> mozna modyfikowac
 */
 
-void Rezerwacja::usunRezerwacje() {
+void Rezerwacja::usunRezerwacje() 
+{
 	_czyIstnieje = false;
 }
 
@@ -79,7 +81,8 @@ Metoda statsRezerwacji
 Wyswietla dane odnosnie danej rezerwacji
 */
 
-void Rezerwacja::statusRezerwacji() {
+void Rezerwacja::statusRezerwacji() 
+{
 	if (_czyIstnieje) {
 		cout << "Numer rezerwacji: " << _nrRezerwacji << endl;
 		cout << "Nazwisko: " << _nazwisko << endl;

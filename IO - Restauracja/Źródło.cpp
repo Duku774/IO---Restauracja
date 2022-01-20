@@ -3,6 +3,7 @@ using namespace std;
 #include "libraries/Zamowienie.h"
 #include "libraries/Wlasciciel.h"
 #include"libraries/Menu.h"
+#include"libraries/Rezerwacja.h"
 void setup(Wlasciciel *admin);
 int main()
 {
@@ -17,6 +18,17 @@ int main()
 	switch (menu_opt)
 	{
 	case 1:
+		cout << "1)Zamowienie\n2)Rezerwacja stolika" << endl;
+		int wyb;
+		cin >> wyb;
+		if (wyb == 1)
+		{
+			Zamowienie::noweZamowienie();
+		}
+		else
+		{
+			Rezerwacja::nowaRezerwacja();
+		}
 		break;
 	case 0:
 		string pass;

@@ -22,7 +22,6 @@ class Danie
 		double _cenaDania;
 		bool czyIstnieje = 1;
 	public: 
-		Menu* _unnamed_Menu;
 
 		void pokazDanie();
 

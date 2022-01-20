@@ -10,40 +10,25 @@ using namespace std;
 #include "Platnosc.h"
 #include "Danie.h"
 #include "Item.h"
+#include "Menu.h"
 
-Danie danie[20];
-
-
+Item itemy[100];
 void Zamowienie::wyswietlZamowienie() 
 {
-	for (int i = 1; i < _liczbaPotraw + 1; i++) 
-	{
-		cout << endl;
-		cout << i << ". " << endl;
-		danie[i].pokazDanie();
-	}
+	
 }
-
-void Zamowienie::noweZamowienie(int aIlePotraw) 
+void Zamowienie::noweZamowienie() 
 {
-	_liczbaPotraw = aIlePotraw;
-	string aNazwa;
-	int AID;
-	double aCena;
-	for (int i = 1; i < _liczbaPotraw + 1; i++) 
+	int id=9999,ilosc;
+	while (id!=0)
 	{
-
-		cout << "Podaj nazwe: " << endl;
-		cin >> aNazwa;
-		cout << "Podaj ID: " << endl;
-		cin >> AID;
-		cout << "Podaj cene: " << endl;
-		cin >> aCena;
-		danie[i].setDanie(AID, aNazwa, aCena);
-
-
+		cout << "aby wyjsc kliknij 0" << endl;
+		Menu::pokazMenu();
+		cout << "wybierz danie oraz ilosc:" << endl;
+		cin >> id >> ilosc;
+		//itemy[id - 1].setItem(ilosc,);
 	}
-	wyswietlZamowienie();
+
 }
 
 void Zamowienie::edytujZamowienie() 
@@ -61,7 +46,7 @@ void Zamowienie::edytujZamowienie()
 	cin >> AID;
 	cout << "Podaj cene: " << endl;
 	cin >> aCena;
-	danie[wybor].setDanie(AID, aNazwa, aCena);
+	//danie[wybor].setDanie(AID, aNazwa, aCena);
 }
 
 void Zamowienie::platnosc() {
