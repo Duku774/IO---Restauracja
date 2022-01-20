@@ -27,7 +27,8 @@ int main()
 		}
 		else
 		{
-			Rezerwacja::nowaRezerwacja();
+
+			//Rezerwacja::nowaRezerwacja();
 		}
 		break;
 	case 0:
