@@ -6,9 +6,14 @@ using namespace std;
 #include "Zamowienie.h"
 #include "Danie.h"
 
-public void Item::getItem(string a_ilosc ) {
-    _ilosc = a_ilosc
-    cout << "Wprowadz numer zamówienia: " << endl;
-    	cin >> _nrzamówienia;
-    	czyIstnieje = 0;
+/*
+Metoda setItem
+Ustawia dane odnosnie dania w zamowieniu
+_ilosc -> ilosc danej potrawy
+_rodzaj_Dania -> jaka to potrawa
+*/
+
+void Item::setItem(int aIlosc, Danie* aDanie) {
+    _ilosc = aIlosc;
+    _rodzaj_Dania_ = aDanie;
 }

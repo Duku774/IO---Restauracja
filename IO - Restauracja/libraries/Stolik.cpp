@@ -8,6 +8,11 @@ using namespace std;
 #include "Zamowienie.h"
 
 
+/*
+Metoda zmianaStolikow
+Zamienia ze soba dwa stoliki (rezerwacje i zamowienia odnoszace sie do miejsca)
+Dziala tylko gdy obydwa stoliki maja rowna ilosc miejsc
+*/
 
 void Stolik::zmianaStokilow(Stolik* bMiejsce) {
 	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
@@ -29,6 +34,11 @@ void Stolik::zmianaStokilow(Stolik* bMiejsce) {
 	}
 }
 
+/*
+Metoda nowyStolik
+Tworzy nowy stolik z podanym ID oraz dana liczba miejsc
+*/
+
 void Stolik::nowyStolik(string aId, int aMiejsca) {
 	_idStolika = aId;
 	_liczbaMiejsc = aMiejsca;
@@ -37,11 +47,17 @@ void Stolik::nowyStolik(string aId, int aMiejsca) {
 	_Zamowienie_ = NULL;
 }
 
+/*
+Metoda statusStolika
+Wyswietla status danego stolika:
+id, liczba miejsc i czy jest zarezerwowany
+*/
+
 void Stolik::statusStolika() {
-	cout << "Nr Stolika: " << _idStolika << endl;
+	cout << "ID Stolika: " << _idStolika << endl;
 	cout << "Liczba miejsc: " << _liczbaMiejsc << endl;
 
-	if (_czyZarezerwowany == true) {
+	if (_czyZarezerwowany) {
 		cout << "Zarezerwowany dla: " << endl;
 		_Rezerwacja_->statusRezerwacji();
 	}
@@ -49,8 +65,24 @@ void Stolik::statusStolika() {
 		cout << "Brak rezerwacji" << endl;
 }
 
-//void aktualizacja(Rezerwacja *rezerwacja) {
-	//_czyZajety = true;
+/*
+Metoda aktualizacja
+Sluzy do aktualizowania danych o danym stoliku
+Przypisuje danemu stolikowi rezerwacje lub zamowienie w zaleznosci od wywolania
+*/
 
+void Stolik::aktualizacja(Rezerwacja* aRezerwacja) {
+	if (_czyZajety) {
+		_Rezerwacja_ = aRezerwacja;
+	}
+	else
+		cout << "Taki stolik nie istnieje" << endl;
+}
 
-//}
+void Stolik::aktualizacja(Zamowienie* aZamowienie) {
+	if (_czyZajety) {
+		_Zamowienie_ = aZamowienie;
+	}
+	else
+		cout << "Taki stolik nie istnieje" << endl;
+}
