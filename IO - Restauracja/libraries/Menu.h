@@ -12,18 +12,13 @@ class Menu;
 
 class Menu
 {
-	public: Danie* _unnamed_Danie_;
-	public: std::vector<Danie*> _unnamed_Danie_2;
+	public: 
+		Danie* _unnamed_Danie_;
 
-	public: void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
+		void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
+		void usunPotrawe(int aId); 
+		void pokazMenu();
 
-	public: void usunPotrawe(int aId);
-
-	public: void pokazMenu();
-
-	public: void dodajDanieDoMenu();
-
-	public: void usunDanieZMenu();
 };
 
 #endif

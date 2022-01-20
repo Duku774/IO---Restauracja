@@ -6,16 +6,17 @@
 
 using namespace std;
 
-Danie dania[40];
-int z = 0;
+Danie dania[40]; // Tablica wszystich dan
+int z = 0; // Liczba edytowanego ostatnio dania
 
-void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania) 
-{
-	if(z<40)
-    {
-        dania[z].set_idDania(aId);
-        dania[z].set_nazwaDania(nazwaDania);
-        dania[z].set_cenaDania(cenaDania);
+/*
+Metoda dodajPotrawe
+Dodaje potrawe do menu z podanych argumentow
+*/
+
+void Menu::dodajPotrawe(int aId, string nazwaDania, double cenaDania) {
+	if(z<40) {
+        dania[z].setDanie(aId, nazwaDania, cenaDania);
     	z++;
     	pokazMenu();
     }
@@ -23,37 +24,32 @@ void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania)
         cout << "Nie można dodać kolejnej potrawy" << endl;
 }
 
-void Menu::usunPotrawe(int aId) 
-{
-	for (int i = aId; i < z; i++)
-    	{
-        dania[i].set_idDania(dania[i + 1].get_idDania());
-        dania[i].set_nazwaDania(dania[i + 1].get_nazwaDania());
-        dania[i].set_cenaDania(dania[i + 1].get_cenaDania());
-    	}
-    	dania[aId].pokazDanie();
-    	z--;
+/*
+Metoda usunPotrawe
+Usuwa potrawe z menu po podanym ID
+*/
+
+void Menu::usunPotrawe(int aId) {
+	for (int i = aId; i < z; i++) {
+        dania[i].setDanie(dania[i + 1].get_idDania(), dania[i + 1].get_nazwaDania(), dania[i + 1].get_cenaDania());
+    }
+
+    z--;
 }
 
-void Menu::pokazMenu() 
-{
-	    int i=0;
-    	while(dania[i].get_nazwaDania()!="")
-    	{
+/*
+Metoda pokazMenu
+Wyswietla cale menu klientowi
+*/
 
-    		cout << "Id: " << dania[i].get_idDania() << endl;
-    		cout << "Nazwa Dania" << dania[i].get_nazwaDania() << endl;
-    		cout << "Cena: " << dania[i].get_cenaDania() << endl;
-    		cout << "\n";
-            i++;
-    	}
+void Menu::pokazMenu() {
+    int i=0;
+
+    while(dania[i].get_nazwaDania()!="") {
+    	cout << "Id: " << dania[i].get_idDania() << endl;
+    	cout << "Nazwa Dania" << dania[i].get_nazwaDania() << endl;
+    	cout << "Cena: " << dania[i].get_cenaDania() << endl;
+    	cout << "\n";
+        i++;
+    }
 }
-
-void Menu::dodajDanieDoMenu() {
-	throw "Not yet implemented";
-}
-
-void Menu::usunDanieZMenu() {
-	throw "Not yet implemented";
-}
-
