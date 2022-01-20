@@ -24,7 +24,6 @@ class Danie
 	public: 
 		Menu* _unnamed_Menu;
 		void pokazDanie();
-		void getDanie();
 		void setDanie(int aId, string aNazwa, double aCena);	//aNazwa - argumenty
 		void set_idDania(int id)
 		  {

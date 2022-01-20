@@ -20,7 +20,7 @@ void Zamowienie::wyswietlZamowienie()
 	{
 		cout << endl;
 		cout << i << ". " << endl;
-		danie[i].getDanie();
+		danie[i].pokazDanie();
 	}
 }
 
