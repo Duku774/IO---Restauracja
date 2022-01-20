@@ -1,3 +1,4 @@
+#include <iostream>
 #include <exception>
 #include <string>
 using namespace std;
@@ -6,7 +7,9 @@ using namespace std;
 #include "Klient.h"
 #include "Stolik.h"
 
-public: void nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi) {
+
+	
+	void Rezerwacja::nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi) {
 	_nazwisko = aNazwisko;
 	_godzina = aGodzina;
 	_dataRezerwacji = aData;
@@ -17,7 +20,7 @@ public: void nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aI
 	czyIstnieje = 0;
 }
 
-public: void zmianaRezerwacji() {
+	void Rezerwacja::zmianaRezerwacji() {
 	int wybor;
 	if (czyIstnieje == 0) {
 		cout << "Co chcesz zmienic? " << endl;
@@ -49,12 +52,12 @@ public: void zmianaRezerwacji() {
 
 }
 
-public: void usunRezerwacjie() {
+	void Rezerwacja::usunRezerwacjie() {
 	czyIstnieje = 1;
 
 }
 
-public: void statusRezerwacji() {
+	void Rezerwacja::statusRezerwacji() {
 	if (czyIstnieje == 0) {
 		cout << "Numer rezerwacji: " << _nrRezerwacji << endl;
 		cout << "Nazwisko: " << _nazwisko << endl;

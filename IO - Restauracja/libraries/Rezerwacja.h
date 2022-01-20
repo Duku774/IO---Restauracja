@@ -24,7 +24,7 @@ private: int czyIstnieje;
 public: Klient* _unnamed_Klient_;
 public: Stolik* _unnamed_Stolik_;
 
-public: int nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi);
+public: void nowaRezerwacja(string aNazwisko, int aGodzina, string aData, int aIlosc_ludzi);
 
 public: void zmianaRezerwacji();
 

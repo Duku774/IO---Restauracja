@@ -1,3 +1,4 @@
+#include <iostream>
 #include <exception>
 #include <string>
 using namespace std;
@@ -7,21 +8,23 @@ using namespace std;
 #include "Menu.h"
 #include "Item.h"
 
-public void Danie::getDanie(string _nazwaDania) {
-	_nazwaDania = a_nazwaDania;
-
-	cout << "Wprowadz nazwe dania: " << endl;
-    	cin >> _nazwaDania;
-    	czyIstnieje = 0;
+void Danie::getDanie() {
+	cout << "Nazwa: " << _nazwaDania;
+	cout << " ID: " << _idDania;
+	cout << " Cena: " << _cenaDania << " PLN" << endl;
 
 }
 
-public void Danie::setDanie(string aId, _nazwaDania,double _cenaDania) {
-f (czyIstnieje == 0) {
-		cout << "Numer ID: " << aID << endl;
-		cout << "Nazwa: " << _nazwaDania << endl;
-		cout << "Cena: " << _cenaDania << endl;
+void Danie::setDanie(string aId,string a_nazwaDania,double a_cenaDania) {
+	_idDania = aId;
+	_nazwaDania = a_nazwaDania;
+	_cenaDania = a_cenaDania;
+	if (czyIstnieje == 0) {
+		cout << "Numer ID: " << aId << endl;
+		cout << "Nazwa: " << a_nazwaDania << endl;
+		cout << "Cena: " << a_cenaDania << endl;
 	}
+
 	else
 		cout << "To danie nie istnieje" << endl;
 }

@@ -8,7 +8,7 @@ using namespace std;
 
 public void Item::getItem(string a_ilosc ) {
     _ilosc = a_ilosc
-    cout << "Wprowadz numer zamóweinia: " << endl;
+    cout << "Wprowadz numer zamówienia: " << endl;
     	cin >> _nrzamówienia;
     	czyIstnieje = 0;
 }

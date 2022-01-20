@@ -8,6 +8,7 @@ using namespace std;
 #include "Zamowienie.h"
 
 
+
 void Stolik::zmianaStokilow(Stolik* bMiejsce) {
 	if (_liczbaMiejsc == bMiejsce->_liczbaMiejsc) {
 		bool pom = _czyZajety;
@@ -36,7 +37,7 @@ void Stolik::nowyStolik(string aId, int aMiejsca) {
 	_Zamowienie_ = NULL;
 }
 
-void statusStolika() {
+void Stolik::statusStolika() {
 	cout << "Nr Stolika: " << _idStolika << endl;
 	cout << "Liczba miejsc: " << _liczbaMiejsc << endl;
 
@@ -53,4 +54,3 @@ void statusStolika() {
 
 
 //}
-};

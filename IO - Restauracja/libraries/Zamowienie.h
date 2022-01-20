@@ -35,9 +35,9 @@ class Zamowienie
 
 	public: void noweZamowienie(int aIlePotraw);
 
-	public: void edytujZamowienie(string aIdZamowienia);
+	public: void edytujZamowienie();
 
-	public: void platnosc(int aIdZamowienia);
+	public: void platnosc();
 };
 
 #endif
