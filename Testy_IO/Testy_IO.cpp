@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 #include "../IO - Restauracja/libraries/Wlasciciel.cpp"
 #include"../IO - Restauracja/èrÛd≥o.cpp"
+#include "../IO - Restauracja/libraries/Stolik.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace std;
@@ -59,6 +60,30 @@ namespace TestyIO
 			}
 			cout.rdbuf(sbuf);
 			cout << buffer.get();
+			Assert::AreEqual(expected, buffer.str());
+		}
+
+
+		TEST_METHOD(TestMethod4)
+		{
+			Stolik test;
+
+
+			test.nowyStolik("abc", 2);
+
+			string expected = "ID Stolika: abc\nLiczba miejsc: 2\nBrak rezerwacji\n";
+			std::stringstream buffer;
+			std::streambuf* sbuf = std::cout.rdbuf();
+			std::cout.rdbuf(buffer.rdbuf());
+
+
+			test.statusStolika();
+
+			std::cout.rdbuf(sbuf);
+			std::cout << "std original buffer: \n";
+			std::cout << buffer.get();
+
+
 			Assert::AreEqual(expected, buffer.str());
 		}
 		
