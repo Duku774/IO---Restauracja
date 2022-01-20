@@ -28,6 +28,7 @@ class Stolik
     void nowyStolik(string aId, int aMiejsca);
 		void nowyStolik();
 		void aktualizacja();
+		void statusStolika();
 };
 
 #endif
