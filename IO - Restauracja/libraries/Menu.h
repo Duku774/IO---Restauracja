@@ -15,9 +15,10 @@ class Menu
 	public: 
 		Danie* _unnamed_Danie_;
 
-		void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
-		void usunPotrawe(int aId); 
-		void pokazMenu();
+		static void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
+		static void usunPotrawe(int aId); 
+		static void pokazMenu();
+		static void setup();
 };
 
 #endif
