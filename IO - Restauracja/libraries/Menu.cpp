@@ -1,45 +1,51 @@
 #include <exception>
 #include <vector>
-using namespace std;
-
+#include<iostream>
 #include "Menu.h"
 #include "Danie.h"
 
+using namespace std;
 
-Danie[40];
-int n = 0;
+Danie dania[40];
+int z = 0;
 
-void Menu::dodajPotrawe(string aId, nazwaDania,double cenaDania) {
-	if(n<40){
-	        Danie[n].set_aID(aId);
-    		Danie[n].set_nazwaDania(nazwaDania);
-    		Danie[n].set_cenaDania(cenaDania);
-    		n++;
-    		pokazMenu();
-    	}
-    	else cout << "Nie można dodać kolejnej potrawy" << endl;
+void Menu::dodajPotrawe(int aId, string nazwaDania,double cenaDania) 
+{
+	if(z<40)
+    {
+        dania[z].set_idDania(aId);
+        dania[z].set_nazwaDania(nazwaDania);
+        dania[z].set_cenaDania(cenaDania);
+    	z++;
+    	pokazMenu();
+    }
+    else 
+        cout << "Nie można dodać kolejnej potrawy" << endl;
 }
 
-void Menu::usunPotrawe() {
-	for (int i = aId; i < n; i++)
+void Menu::usunPotrawe(int aId) 
+{
+	for (int i = aId; i < z; i++)
     	{
-    		danie[i].set_aID(danie[i + 1].get_aId());
-    		danie[i].set_nazwaDania(danie[i + 1].get_nazwaDania());
-    		danie[i].set_cenaDania(danie[i + 1].get_cenaDania());
+        dania[i].set_idDania(dania[i + 1].get_idDania());
+        dania[i].set_nazwaDania(dania[i + 1].get_nazwaDania());
+        dania[i].set_cenaDania(dania[i + 1].get_cenaDania());
     	}
-    	pokazDanie();
-    	n--;
+    	dania[aId].pokazDanie();
+    	z--;
 }
 
-void Menu::sprawdzMenu() {
-	int i=0;
-    	while(Danie[i].get_nazwaDania()!="")
+void Menu::pokazMenu() 
+{
+	    int i=0;
+    	while(dania[i].get_nazwaDania()!="")
     	{
-    		cout << "Id: " <<danie[i].get_aId() << endl;
-    		cout << "Nazwa Dania" <<danie[i].get_nazwaDania() << endl;
-    		cout << "Cena: " <<danie[i].get_cenaDania() << endl;
+
+    		cout << "Id: " << dania[i].get_idDania() << endl;
+    		cout << "Nazwa Dania" << dania[i].get_nazwaDania() << endl;
+    		cout << "Cena: " << dania[i].get_cenaDania() << endl;
     		cout << "\n";
-    		i++
+            i++;
     	}
 }
 

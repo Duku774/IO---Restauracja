@@ -16,4 +16,5 @@ _rodzaj_Dania -> jaka to potrawa
 void Item::setItem(int aIlosc, Danie* aDanie) {
     _ilosc = aIlosc;
     _rodzaj_Dania_ = aDanie;
+
 }

@@ -15,11 +15,11 @@ class Menu
 	public: Danie* _unnamed_Danie_;
 	public: std::vector<Danie*> _unnamed_Danie_2;
 
-	public: void dodajPotrawe();
+	public: void dodajPotrawe(int aId, string nazwaDania, double cenaDania);
 
-	public: void usunPotrawe();
+	public: void usunPotrawe(int aId);
 
-	public: void sprawdzMenu();
+	public: void pokazMenu();
 
 	public: void dodajDanieDoMenu();
 

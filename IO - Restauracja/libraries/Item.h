@@ -19,7 +19,6 @@ class Item
 	public: 
 		Danie* _rodzaj_Dania_; // jesli to klasa '_' na koniec
 		void setItem(int aIlosc, Danie *aDanie);
-
 };
 
 #endif

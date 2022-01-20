@@ -14,20 +14,24 @@ using namespace std;
 Danie danie[20];
 
 
-void Zamowienie::wyswietlZamowienie() {
-	for (int i = 1; i < _liczbaPotraw + 1; i++) {
+void Zamowienie::wyswietlZamowienie() 
+{
+	for (int i = 1; i < _liczbaPotraw + 1; i++) 
+	{
 		cout << endl;
 		cout << i << ". " << endl;
 		danie[i].getDanie();
 	}
 }
 
-void Zamowienie::noweZamowienie(int aIlePotraw) {
+void Zamowienie::noweZamowienie(int aIlePotraw) 
+{
 	_liczbaPotraw = aIlePotraw;
 	string aNazwa;
-	string AID;
+	int AID;
 	double aCena;
-	for (int i = 1; i < _liczbaPotraw + 1; i++) {
+	for (int i = 1; i < _liczbaPotraw + 1; i++) 
+	{
 
 		cout << "Podaj nazwe: " << endl;
 		cin >> aNazwa;
@@ -42,10 +46,11 @@ void Zamowienie::noweZamowienie(int aIlePotraw) {
 	wyswietlZamowienie();
 }
 
-void Zamowienie::edytujZamowienie() {
+void Zamowienie::edytujZamowienie() 
+{
 	int wybor;
 	string aNazwa;
-	string AID;
+	int AID;
 	double aCena;
 	cout << "Ktora pozycje chcesz zmienic? " << endl;
 	cin >> wybor;
