@@ -77,7 +77,7 @@ void Rezerwacja::usunRezerwacje()
 }
 
 /*
-Metoda statsRezerwacji
+Metoda statusRezerwacji
 Wyswietla dane odnosnie danej rezerwacji
 */
 

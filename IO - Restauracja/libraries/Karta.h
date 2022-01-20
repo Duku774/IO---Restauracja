@@ -11,8 +11,12 @@ class Karta;
 
 class Karta: public Platnosc
 {
+	private:
+		int Pin = 0;
 
-	public: void autoryzacja();
+	public:
+		void setPin();
+		void autoryzacja(int aPin);
 };
 
 #endif

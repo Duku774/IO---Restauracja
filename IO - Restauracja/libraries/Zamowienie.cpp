@@ -12,11 +12,30 @@ using namespace std;
 #include "Item.h"
 #include "Menu.h"
 
-Item itemy[100];
+Danie danie[20];
+
+/*
+Metoda wyswietlZamowienie
+Wyswietla wszystkie dane odnosnie zamowienia
+*/
+
 void Zamowienie::wyswietlZamowienie() 
 {
-	
+	for (int i = 1; i < _liczbaPotraw + 1; i++) 
+	{
+		cout << endl;
+		cout << i << ". " << endl;
+		danie[i].pokazDanie();
+	}
 }
+
+/*
+Metoda noweZamowienie
+Tworzy nowe zamowienie na podstawie podanej liczby
+Jest to liczba roznych rodzajow dan w zamowieniu
+*/
+Item itemy[100];
+
 void Zamowienie::noweZamowienie() 
 {
 	int id=9999,ilosc;
@@ -30,6 +49,12 @@ void Zamowienie::noweZamowienie()
 	}
 
 }
+
+/*
+Metoda edytujZamowienie
+Zmienia dana pozycje w zamowieniu
+Bazuje na znajomosci menu -> musi byc znane ID, Nazwa oraz cena dania na ktore jest zmiana
+*/
 
 void Zamowienie::edytujZamowienie() 
 {

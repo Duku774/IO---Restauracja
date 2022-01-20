@@ -10,24 +10,22 @@ using namespace std;
 //class Pracownik;
 //class Wlasciciel;
 
-class Wlasciciel: public Pracownik
-{
-private: string _haslo;
+class Wlasciciel: public Pracownik {
+	private: 
+		string _haslo;
 
-public: 
-	void zmianaHasla(string haslo)
-	{
-	this->_haslo = haslo;
-	}
-	string getHaslo()
-	{
-		return _haslo;
-	}
-	static void dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek);
-	static void pokazPracownikow();
-	static void usunPracownika(int aIdPracownika);
-	static void dodajPotrawe();
-	static void usunPotrawe();
+	public: 
+		void zmianaHasla(string haslo) {
+			this->_haslo = haslo;
+		}
+		string getHaslo() {
+			return _haslo;
+		}
+		static void dodajPracownika(string aImie, string aNazwisko, string aNrTelefonu, string aAdres, int aWiek);
+		static void pokazPracownikow();
+		static void usunPracownika(int aIdPracownika);
+		static void dodajPotrawe();
+		static void usunPotrawe();
 };
 
 #endif
